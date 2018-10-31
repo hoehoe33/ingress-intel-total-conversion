@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">IITC Mobile test</string>
+    <string name="app_name">IITC Mobile</string>
     <string name="toggle_map">Toggle map visibility</string>
     <string name="clear_log">Clear log</string>
     <string name="debug_run">Run</string>
@@ -22,7 +22,7 @@
     <!-- Use CDATA to prevent android from parsing html tags....we are doing this with Html.fromHtml() -->
     <string name="pref_about_text">
         <![CDATA[
-        <h1>Ingress Intel Total Conversion Mobile</h1>
+        <h1>Ingress Intel Total Conversion Mobile Hoehoe33</h1>
         <b>Build Version: %1$s</b><br>
         <b>IITC Version: %2$s</b><br>
         <br>
