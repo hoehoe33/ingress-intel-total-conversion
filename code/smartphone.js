@@ -87,6 +87,46 @@ window.smartphoneInfo = function(data) {
   }
   t += ' ' + percentage + '% ';
   t += data.title;
+  
+  // for mod information
+  var modsHtml = '';
+  if (details) {
+    var modHtml = '';
+    for (var i in details.mods) {
+      var modRarity = '';
+      var modName = '';
+      var modColor = '#888';
+      var modShortName = '-';
+      if (details.mods[i] !== null) {
+        modRarity = details.mods[i].rarity;
+        modName = details.mods[i].name;
+        modColor = window.COLORS_MOD[modRarity];
+        modShortName = '-';
+      }
+      switch(modName){
+				case 'Portal Shield': modShortName = 'PS'; break;
+        case 'AXA Shield': modShortName = 'AX'; break;
+        case 'Aegis Shield': modShortName = 'AS'; break;
+
+				case 'Heat Sink': modShortName = 'HS'; break;
+				case 'Multi-hack': modShortName = 'MH'; break;
+
+				case 'Link Amp': modShortName = 'LA'; break;
+				case 'SoftBank Ultra Link': modShortName = 'SB'; break;
+
+				case 'Force Amp': modShortName = 'FA'; break;
+				case 'Turret': modShortName = 'Tu'; break;
+
+        case 'Ito En Transmuter (+)': modShortName = '茶+'; break;
+        case 'Ito En Transmuter (-)': modShortName = '茶-'; break;
+      }
+      //modHtml += '<div class="mods" style="width:42%;margin:2px 4%;background:rgba(0,0,0,.6);border:1px solid '+modColor+';color:'+modColor+'">'+modShortName+'</div>';
+      modHtml += '<font color="'+modColor+'">[ '+modShortName+' ]</font>';
+    }
+    modsHtml = '<div>' + modHtml + '</div>';
+    }
+    t += modsHtml;
+
 
   if(details) {
     var l,v,max,perc;
@@ -136,7 +176,7 @@ window.runOnSmartphonesAfterBoot = function() {
   $('#updatestatus').prepend('<div id="mobileinfo" onclick="show(\'info\')"></div>');
   window.addHook('portalSelected', window.smartphoneInfo);
   // init msg of status bar. hint for the user that a tap leads to the info screen
-  $('#mobileinfo').html('<div style="text-align: center"><b>tap here for info screen</b></div>');
+  $('#mobileinfo').html('<div style="text-align: center"><b>Tap Here for info screen</b></div>');
 
   // disable img full view
   $('#portaldetails').off('click', '**');
