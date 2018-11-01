@@ -37,7 +37,11 @@ public class IITC_WebViewClient extends WebViewClient {
         return
             url.startsWith("https://intel.ingress.com") ||
             url.matches("^https?://(?:intel\\.)?ingress\\.com/intel.*") ||
+<<<<<<< HEAD
             url.matches("^https?://(?:intel\\.)?ingress\\.com/mission.*");        
+=======
+            url.matches("^https?://(?:intel\\.)?ingress\\.com/mission.*");
+>>>>>>> upstream/master
     }
 
     private final IITC_Mobile mIitc;
