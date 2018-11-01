@@ -77,7 +77,8 @@ body {
 
 #mobileinfo .filllevel {
   position: absolute;
-  bottom: 0;
+  /* bottom: 0;*/
+  bottom: 52%;
   height: 3px;
 }
 
@@ -87,6 +88,22 @@ body {
 
 #mobileinfo .res .filllevel {
   background-color: #00c5ff !important;
+}
+
+#mobileinfo .mods {
+  margin: 3px auto auto auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5%
+  /* text-align: center; */
+}
+
+#mobileinfo .mod {
+  text-align: center;
+  width: 23%;
+  background: rgba(0,0,0,.6);
+  margin: 0.5%;
+  display: inline-block;
 }
 
 #name #signout { /* no hover, always show signout button */

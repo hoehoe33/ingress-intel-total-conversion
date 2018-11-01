@@ -117,13 +117,12 @@ window.smartphoneInfo = function(data) {
 				case 'Force Amp': modShortName = 'FA'; break;
 				case 'Turret': modShortName = 'Tu'; break;
 
-        case 'Ito En Transmuter (+)': modShortName = '茶+'; break;
-        case 'Ito En Transmuter (-)': modShortName = '茶-'; break;
+        case 'Ito En Transmuter (+)': modShortName = '茶＋'; break;
+        case 'Ito En Transmuter (-)': modShortName = '茶ー'; break;
       }
-      //modHtml += '<div class="mods" style="width:42%;margin:2px 4%;background:rgba(0,0,0,.6);border:1px solid '+modColor+';color:'+modColor+'">'+modShortName+'</div>';
-      modHtml += '<font color="'+modColor+'">[ '+modShortName+' ]</font>';
+      modHtml += '<div class="mod" style="left:'+25*i+'%;border:1px solid '+modColor+';color:'+modColor+'">'+modShortName+'</div>';
     }
-    modsHtml = '<div>' + modHtml + '</div>';
+    modsHtml = '<div class="mods">' + modHtml + '</div>';
     }
     t += modsHtml;
 
