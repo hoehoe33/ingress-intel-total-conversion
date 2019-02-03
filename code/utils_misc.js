@@ -129,7 +129,8 @@ window.convertCookieToLocalStorage = function(name) {
 window.digits = function(d) {
   // U+2009 - Thin Space. Recommended for use as a thousands separator...
   // https://en.wikipedia.org/wiki/Space_(punctuation)#Table_of_spaces
-  return (d+"").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1&#8201;");
+  //return (d+"").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1&#8201;");
+  return (d+"").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 }
 
 
