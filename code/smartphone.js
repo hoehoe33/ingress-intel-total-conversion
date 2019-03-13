@@ -118,7 +118,7 @@ window.smartphoneInfo = function(data) {
 				case 'Turret': modShortName = 'Tu'; break;
 
         case 'Ito En Transmuter (+)': modShortName = '茶＋'; break;
-        case 'Ito En Transmuter (-)': modShortName = '茶ー'; break;
+        case 'Ito En Transmuter (-)': modShortName = '茶－'; break;
       }
       modHtml += '<div class="mod" style="left:'+25*i+'%;border:1px solid '+modColor+';color:'+modColor+'">'+modShortName+'</div>';
     }
